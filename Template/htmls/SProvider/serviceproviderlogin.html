@@ -1,0 +1,125 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background: url("{% static 'bg.jpg' %}");
+			background-color:#eee;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+		.style1 {
+	color: #7753ea;
+	font-weight: bold;
+}
+        .style2 {
+	font-family: 'Righteous', cursive;
+	color: #FF0000;
+	font-weight: bold;
+}
+.style5 {
+	color: #FF0099;
+	font-weight: bold;
+}
+.login{
+	width: 35vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid black;
+	margin-left: 400px;
+	border-radius: 1rem;
+	filter: blur(px);
+
+}
+input{
+	height: 7vh;
+	width: 23vw;
+	border-radius: 0.5rem;
+	border: none;
+}
+img{
+	margin-left: 55px;
+	padding-top: 5px;
+	border-radius: 0.5rem;
+}
+.btn-md{
+	background-color: rgb(99, 146, 194);
+	color: #eee;
+	font-size: large;
+}
+.btn-md:hover{
+	background-color: #eee;
+	color: black;
+	transition: 0.7s all ease-in-out;
+}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div>
+			<h2 class="text-center style1" id="title">Data Driven Energy Economy Prediction for Electric City Buses Using Machine Learning</h2>
+			 <p class="text-center"> <span class="style5"><small id="passwordHelpInline" class="text-muted">battery electric buses, energy demand prediction, feature extraction, machine learning,meta modeling.
+
+          </small></span> </p>
+ 			<hr>
+			<div class="row login">
+				<div class="back">
+
+				</div>
+
+
+				
+				<div class="col-md-7">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset>
+                             {% load static %}
+						<img src="{% static '/login.jpg' %}" alt="My image">
+							<p class="style2"> Login Service Provider: </p>
+
+							<div class="form-group">
+								<input type="text" name="username"   placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"   placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="Login">
+							</div>
+ 						</fieldset>
+						<br><br>
+						<button class="btn btn-lg "><a href="{% url 'login' %}">User Login</a></button> 
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>

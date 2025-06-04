@@ -1,0 +1,116 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Energy Economy Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+									   <td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Fid</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Brand</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Model</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">AccelSec</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">TopSpeed_KmH</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Range_Km</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Efficiency_WhKm</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">FastCharge_KmH</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">RapidCharge</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">PowerTrain</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">PlugType</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">BodyStyle</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Segment</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Charging_Price</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction </span></div></td>
+
+
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Fid}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Brand}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Model}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.AccelSec}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.TopSpeed_KmH}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Range_Km}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Efficiency_WhKm}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.FastCharge_KmH}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.RapidCharge}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.PowerTrain}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.PlugType}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.BodyStyle}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Segment}}</td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Charging_Price}}</td>
+						  <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >{{object.Prediction}}</td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
